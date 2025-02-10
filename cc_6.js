@@ -55,3 +55,15 @@ function discountFunction(orders, applyBulkDiscount) { // establish function and
 let applyBulkDiscount = (amount) => amount > 500 ? amount * 0.9 : amount // function as argument
 let orderDiscount = discountFunction(orders, applyBulkDiscount)
 console.log(orderDiscount) // log results
+
+// Task 7: Closures
+function createExpenseTracker() {
+    let runningTotal = 0;
+    return function(expense) {
+        runningTotal += expense;
+        return runningTotal;
+    }
+}
+let tracker = createExpenseTracker()
+console.log(`Total Expenses: $${tracker(250)}`)
+console.log(`Total Expenses: $${tracker(150)}`) 
