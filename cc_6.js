@@ -71,11 +71,11 @@ console.log(`Total Expenses: $${tracker(150)}`) // log results
 // Task 8: Recursion in JavaScript
 function calculateYearsToPromotion(employeeLevel) { // create function and parameters
 if (employeeLevel >= 10) { 
-    return `Years to Level 10: 0`;
+    return 0;
 }
 else {
-    return `Years to Level 10: ${(10 - employeeLevel) * 2}`; // function used to calculate years left
+    return (10 - employeeLevel) * 2; // function used to calculate years left
 }
 }
-console.log(calculateYearsToPromotion(7)) // log results
-console.log(calculateYearsToPromotion(5)) // log results
+console.log(`Years to Level 10: ${calculateYearsToPromotion(7)}`) // log results
+console.log(`Years to Level 10: ${calculateYearsToPromotion(5)}`) // log results
