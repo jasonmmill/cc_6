@@ -39,3 +39,10 @@ function calculateSubscriptionCost(plan, months, discount = 0) { // create funct
 }
 console.log(`Total Cost: $${calculateSubscriptionCost("Basic",6,10)}`) // log results using template literal
 console.log(`Total Cost: $${calculateSubscriptionCost("Premium",12,0)}`) // log results using template literal
+
+// Task 5: Returning Values
+function convertCurrency(amount, exchangeRate) { // create function and add parameters
+    return (amount * exchangeRate).toFixed(2) // fix currency to round to two decimals
+}
+console.log(`Converted Amount: $${convertCurrency(100,1.1)}`) // log results using template literal
+console.log(`Converted Amount: $${convertCurrency(250,0.85)}`) // log results using template literal
