@@ -46,3 +46,12 @@ function convertCurrency(amount, exchangeRate) { // create function and add para
 }
 console.log(`Converted Amount: $${convertCurrency(100,1.1)}`) // log results using template literal
 console.log(`Converted Amount: $${convertCurrency(250,0.85)}`) // log results using template literal
+
+// Task 6: High-Order Functions
+let orders = [ 200, 600, 1200, 450, 800 ]; // create array
+function discountFunction(orders, applyBulkDiscount) { // establish function and parameters
+    return orders.map(applyBulkDiscount)
+}
+let applyBulkDiscount = (amount) => amount > 500 ? amount * 0.9 : amount // function as argument
+let orderDiscount = discountFunction(orders, applyBulkDiscount)
+console.log(orderDiscount) // log results
