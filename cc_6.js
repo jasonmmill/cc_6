@@ -10,3 +10,16 @@ function calculateSalesTax(amount, taxRate) { // create function and add paramet
 }
 console.log(`Sales tax: $${calculateSalesTax(100,0.1)}`) // log results using template literal
 
+// Task 3: 
+let calculateBonus = (salary, performanceRanking) => { // create function and add paramenters
+    if (performanceRanking === "Excellent") { // use if statements to outline different options
+        return salary * 0.2
+    }
+    if (performanceRanking === "Good") {
+        return salary * 0.1
+    }
+    if (performanceRanking === "Average") {
+        return salary * 0.05
+    }
+}
+console.log(`Bonus: $${calculateBonus(70000,"Good")}`) // log results using template literal
