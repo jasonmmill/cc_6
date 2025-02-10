@@ -57,13 +57,25 @@ let orderDiscount = discountFunction(orders, applyBulkDiscount)
 console.log(orderDiscount) // log results
 
 // Task 7: Closures
-function createExpenseTracker() {
+function createExpenseTracker() { // create function
     let runningTotal = 0;
-    return function(expense) {
-        runningTotal += expense;
-        return runningTotal;
+    return function(expense) { // function inside of function
+        runningTotal += expense; 
+        return runningTotal; // answer
     }
 }
 let tracker = createExpenseTracker()
-console.log(`Total Expenses: $${tracker(250)}`)
-console.log(`Total Expenses: $${tracker(150)}`) 
+console.log(`Total Expenses: $${tracker(250)}`) // log results
+console.log(`Total Expenses: $${tracker(150)}`) // log results
+
+// Task 8: Recursion in JavaScript
+function calculateYearsToPromotion(employeeLevel) { // create function and parameters
+if (employeeLevel >= 10) { 
+    return `Years to Level 10: 0`;
+}
+else {
+    return `Years to Level 10: ${(10 - employeeLevel) * 2}`; // function used to calculate years left
+}
+}
+console.log(calculateYearsToPromotion(7)) // log results
+console.log(calculateYearsToPromotion(5)) // log results
